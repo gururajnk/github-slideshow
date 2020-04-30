@@ -8,3 +8,227 @@ for i in range(0,num):
 print(list)
 newlist=set(list)
 print(newlist)
+
+
+#new file
+s=input("enter the string:")
+result=s.split()
+n=len(result)
+newresult=[]
+for i in range(0,n):
+    item=result[n-i-1]
+    newresult.append(item)
+    
+print(newresult)   
+    
+result1=" ".join(newresult)
+print(result1)
+
+ #new file
+
+import string 
+import random
+def password(size=8,chars=string.ascii_letters+string.digits+string.punctuation):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+print(password(int(input("enter length of ur password:"))))
+ 
+#new file
+
+print("This is a progamm to input a list and return a new list without duplicates: ")
+num=int(input("no of elements want to enter ?"))
+list=[]
+for i in range(0,num):
+    x=int(input())
+    list.append(x)
+    
+print(list)
+newlist=set(list)
+print(newlist)
+
+#new file
+def func():
+     num=int(input("enter how many fibinoci no. do u want to print?"))
+     i=1
+     fib=[]
+     if num==0:
+         fib=[]
+     elif num==1:
+         fib=[1]
+     elif num==2:
+         fib=[1,1]
+     elif num>2:
+         fib=[1,1]
+         while i<num-1:
+             fib.append(fib[i]+fib[i-1])
+             i+=1
+     return fib   
+print(func())
+input()   
+
+#new file
+name=input("enter ur name:")
+age=int(input("enter  ur age:"))
+x=age+100
+print("my name is "+name+" my age after 100 years is ",x)
+
+#new file
+print("enter ur number:")
+x=int(input())
+if x%2==0:
+    if x%4==0:
+        print("the number is multiple of 4:",x)
+    else:
+        print("the no. is only multiple of 2:",x)
+else:
+    print("the no. is odd and it is",x)
+    
+ #new file
+    print("enter ur two numbers:")
+num=int(input())
+check=int(input())
+if check%num==0:
+    print("check is evenly divided into num:")
+    x=check/num
+    print("check is divided into",x,"parts")
+else:
+    print("check is not divided evenly into num")
+    
+ #newfile
+print("enter the user no. :")
+n=int(input())
+print("the given list is:")
+list=[1,3,56,43,56,7,9,8,45,32,21,12,13,1,41,49]
+list2=[]
+for x in list:
+    if x<n:
+        list2.append(x)
+    else:
+        pass
+print(list2)
+
+#new file
+print("the given list is:")
+list=[1,3,56,43,56,7,9,8,45,32,21,12,13,1,41,49]
+list2=[]
+for x in list:
+    if x<5:
+        list2.append(x)
+    else:
+        pass
+print(list2)
+
+#new file
+print("number to which divisors are required:")
+n=int(input())
+x=range(1,n+1)
+divisors=[]
+for elem in x:
+    if n%elem==0:
+        divisors.append(elem)
+    else:
+        pass
+
+print(divisors)    
+
+#new file
+rd=input("enter the word u want to check it's palindrome property:")
+rvs=word[::-1]
+print(rvs)    
+if word==rvs:
+    print("word is palindrome")
+else:
+    print("word i not palindrome")    
+    
+#new file
+ a=[1,2,5,6,7,8,40,56,34,23]
+na=[x for x in a if x% 2==0]
+print(na)
+
+#new file
+import random
+a=[]
+b=random.randint(5,15)
+while len(a)<b:
+    a.append(random.randint(1,75))
+    
+evenlist=[x for x in a if x%2==0]    
+print(a)
+print(evenlist)
+
+#new file
+import random
+x=random.randint(0,10)
+def use():
+  userinput=int(input("enter input:"))
+  return(userinput)
+def compare(u):
+  if x==u:
+     return("exactly right guess!")
+  elif x-u>0 and x-u<5:
+      return("guess was closer")
+  elif x-u>0 and x-u>5:
+      return("guess was too wide")
+  elif u-x>0 and u-x<5:
+      return("guess was closer")
+  elif u-x>0 and u-x>5:
+      return("guess was too wide")
+  else:
+      pass
+u1=use()
+print(compare(u1))
+print("do u want to continue guessing?")
+ans=input('enter yes or exit:')
+m=1
+while True:
+    if ans =='yes':
+        u1=use()
+        print(compare(u1))
+        m=m+1
+        print("do u want to play one more game?")
+        ans=input("enter yes or exit:")
+        if ans=='yes':
+            continue
+        else:
+            print('game of guessing is over ')
+            break
+    else:
+        print("game over")
+        
+        break
+
+print("total no of guessing :",m)   
+
+
+#new file
+import random
+a=random.sample(range(1,30),12)
+b=random.sample(range(1,30),16)
+c=[i for i in set(a) if i in b]
+print(c)
+
+#new file
+print("enter two numbers for primity check:")
+def primeity(i):
+    count=0
+    for x in range(1,i+1):
+       if i%x==0:
+         count=count+1
+       else:
+         count=count
+    if count>2:
+       return("i is not a prime no.")
+    else:
+       return("input is prime no:")
+def number(n):
+    return(int(input(n))) 
+fn=number("first no.:")
+sn=number("second no.:")
+print(primeity(fn))
+print(primeity(sn))
+
+#new file
+a=[1,2,3,4,5,6]
+def list():
+     return([a[0],a[-1]])
+print(list())
